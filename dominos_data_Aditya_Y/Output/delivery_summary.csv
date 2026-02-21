@@ -1,0 +1,9 @@
+Metric,Value
+Total Orders,15000.0
+Mean Delivery Time (min),20.499389326467778
+Median Delivery Time (min),15.797986066666667
+90th Percentile,21.156904555
+95th Percentile,27.261043996666658
+99th Percentile,65.06418646900005
+Max Time,7299.831374933333
+Orders > 31 min (%),3.713333333333333
