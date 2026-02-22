@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Regex101 Clone</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+        textarea, input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: #ff9800;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔍 Mini Regex Matcher</h1>
+
+    <form method="POST">
+        <textarea name="test_string" rows="5" placeholder="Enter Test String"></textarea><br>
+        <input type="text" name="pattern" placeholder="Enter Regex Pattern"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if error %}
+        <div class="results">
+            <h3 style="color:red;">{{ error }}</h3>
+        </div>
+    {% endif %}
+
+    {% if matches %}
+        <div class="results">
+            <h3>Matched Strings:</h3>
+            <ul>
+                {% for match in matches %}
+                    <li>{{ match }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+</body>
+</html>
