@@ -1,0 +1,15 @@
+<form method="POST">
+<input name="url" placeholder="Enter URL">
+<button type="submit">Shorten</button>
+</form>
+
+{% if short_url %}
+<input value="{{ short_url }}" readonly>
+{% endif %}
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+
+<a href="/history">View History</a>
+<a href="/logout">Logout</a>
